@@ -1,37 +1,82 @@
 import React from 'react';
 import styled from 'styled-components'
+const Mensagem = styled.div `
 
+`
+const BalaoMensagem = styled.div `
+  display:flex;
+  width: fit-content;
+  height: fit-content;
+  word-wrap: break-word;
+  max-width: 60%;
+  min-width:10%;
+  margin: 5px;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+  padding: 0.9em 0.8em;
+  border-radius: 0.5em;
+  font-weight: 450;
+  line-height: 1.3;
+  background-color: ${props => {
+        if (props.tipo === "eu") {
+            return "#DDF7C8" 
+        } else if (props.tipo === "outro") {
+            return "#ffffff" 
+        }
+    }};
+ 
+ align-self:  ${props => {
+        if (props.tipo === "eu") {
+            return "flex-end"
+        } else {
+            return "flex-start"
+        }
+    }};
+  
+`
 
 const BlocoTela = styled.div`
-  height: 800px;
+  height: 100vh;
   width: 600px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #E5DDD5;
 
   div {
     display: flex;
+    /* flex-grow: 1; */
     flex-direction: column;
-    justify-self: flex-start;
+    justify-self: flex-end;
+    padding: 8px;
+
   }
 
   form {
     display: flex; 
+    justify-content: space-evenly;
+    padding-bottom: 10px  
   }
-
+  
+  
   form input:first-child {
-    height: 50px;
-    width: 20%;
+    height: 7vh;
+    width: 25%;
+    border: none;
+    border-radius: 5px;
   }
 
   form input:nth-child(2) {
-    height: 50px;
-    width: 60%;  
+    height: 7vh;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
   }
 
   form button {
-    width: 20%;
+    width: 15%;
+    border: none;
+    border-radius: 5px;
   }
 `
 
@@ -64,11 +109,31 @@ class Exibicao extends React.Component {
 
     render() {
         const linhaDeChat = this.state.informacoesDaTela.map((item) => {
+          if (item.nome.toLowerCase() === "eu") {
             return (
-                <p>
-                  {item.nome}:{item.mensagem}
-                </p>
+              <Mensagem tipo = {"eu"}>
+                <BalaoMensagem tipo = {"eu"}>
+                    <p>
+                      <p>{item.mensagem}</p>
+                    </p>       
+                </BalaoMensagem>
+                
+              </Mensagem>
             );
+            
+          }else {
+            return (
+              <Mensagem tipo = {"outro"}>
+                <BalaoMensagem tipo = {"outro"}>
+                    <p>
+                      <strong>{item.nome}</strong> 
+                      <p>{item.mensagem}</p>
+                    </p>       
+                </BalaoMensagem>
+              </Mensagem>
+            );
+
+          }
         });
 
         return (
