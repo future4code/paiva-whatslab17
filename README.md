@@ -15,14 +15,16 @@ os desenvolvedores do códgio
 
 - Envio de mensagens para exibição na tela ao clicar no botão "enviar"
 - Limpeza automática do campo de mensagens
+- Separação de usuários na interface
 
 ## O que não funciona
 
 - Enviar mensagens ao clicar na tecla "enter"
-- Não há separação de usuários na interface (mensagens aparecem uma abaixo da outra)
+ 
 
 ## Imagens do projeto
-![projeto-whatslab17](https://user-images.githubusercontent.com/81280346/117561902-23011a80-b071-11eb-8485-c78173d1e6c0.png)
+![image](https://user-images.githubusercontent.com/81276751/117583510-e0295c00-b0dd-11eb-98a7-9a82083951b6.png)
+
 
 ## Link do Surge
 
