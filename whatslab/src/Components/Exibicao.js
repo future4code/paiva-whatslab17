@@ -17,13 +17,17 @@ const BlocoTela = styled.div`
   }
 
   form {
-    display: flex;
-    
+    display: flex; 
   }
 
-  form input {
+  form input:first-child {
     height: 50px;
-    width: 40%;
+    width: 20%;
+  }
+
+  form input:nth-child(2) {
+    height: 50px;
+    width: 60%;  
   }
 
   form button {
@@ -33,13 +37,7 @@ const BlocoTela = styled.div`
 
 class Exibicao extends React.Component {
     state = {
-        informacoesDaTela: [
-            {
-                nome: "",
-                mensagem: ""
-            },
-            {}
-        ],
+        informacoesDaTela: [],
         valorInputNome: "",
         valorInputMensagem: ""
     };
@@ -61,7 +59,7 @@ class Exibicao extends React.Component {
 
         const novasInformacoes = [...this.state.informacoesDaTela, objetoInformacoesDaTela];
 
-        this.setState({ informacoesDaTela: novasInformacoes});
+        this.setState({ informacoesDaTela: novasInformacoes, valorInputMensagem: ""});
     };
 
     render() {
@@ -89,7 +87,7 @@ class Exibicao extends React.Component {
                         placeholder="Mensagem"
                     />
 
-                    <button onClick={this.props.onClickEnviaMensagem}>Enviar</button>
+                    <button onClick={this.onClickEnviaMensagem}>Enviar</button>
                 </form>
             </BlocoTela>
         );
