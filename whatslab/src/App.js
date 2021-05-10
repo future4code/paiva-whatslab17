@@ -5,9 +5,9 @@ import styled from 'styled-components'
 
 const EstiloExibicao = styled.div`
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  margin: 60px 0;
+  margin: 2vh 0;
 `
 
 class App extends React.Component {
