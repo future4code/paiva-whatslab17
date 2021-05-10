@@ -6,10 +6,10 @@ Este é um projeto de FrontEnd Web utilizando React.js
 
 Projeto básico de aplicativo de mensagens instantâneas.
 
-Divisão base(tarefa não só e somente limitada à pessoa) de tarefas :
+Divisão base de tarefas :
 - Esta atividade foi realizada utilizando-se da abordagem de Pair Programming. Desta forma,
 ficou a critério da dupla que Bruno realizaria a escrita do código e que Carlos e Bruno seriam
-os desenvolvedores do códgio
+os desenvolvedores do código
 
 ## O que funciona
 
@@ -19,8 +19,7 @@ os desenvolvedores do códgio
 
 ## O que não funciona
 
-- Enviar mensagens ao clicar na tecla "enter"
- 
+- Sistema funcionando conforme o proposto no projeto.
 
 ## Imagens do projeto
 ![image](https://user-images.githubusercontent.com/81276751/117583510-e0295c00-b0dd-11eb-98a7-9a82083951b6.png)
@@ -28,4 +27,4 @@ os desenvolvedores do códgio
 
 ## Link do Surge
 
-http://courageous-money.surge.sh
+http://superficial-lake.surge.sh
